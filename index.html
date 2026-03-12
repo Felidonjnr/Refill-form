@@ -305,7 +305,7 @@
       coldDays: formData.coldDays, birthday: formData.birthday,
       dateJoined: today, lastVisit: today, status: 'Active'
     };
-    const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzf5gRX1wHC84bLxNf3HhejzOQ9azvPhIkfjF09H6GHWw1GvzXpOdVlYvXPqeqnR0Fh6w/exec';
     fetch(SCRIPT_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) })
       .catch(()=>{}).finally(()=>{ showSuccess(); });
     setTimeout(showSuccess, 1500);
